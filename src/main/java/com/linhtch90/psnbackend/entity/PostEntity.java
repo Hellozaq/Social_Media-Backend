@@ -25,7 +25,8 @@ public class PostEntity {
 
     private String content;
 
-    private String image;
+//    private String image;
+    private List<String> image = new ArrayList<>(); // <-- changed from String to List<String>
 
     private Instant createdAt;
 
