@@ -23,7 +23,7 @@ public class JWTUtil {
     }
 
     public Claims getClaims(String token) {
-        return Jwts.parser().setSigningKey(Base64.getEncoder().encode(secretKey.getBytes())).parseClaimsJws(token).getBody();
+        return Jwts.parser().setSigningKey(Base64.getEncoder().encode(secretKey.getBytes())).build().parseClaimsJws(token).getBody();
     }
 
     public boolean isValidToken(String token) {
